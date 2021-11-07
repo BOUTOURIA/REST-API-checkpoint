@@ -1,7 +1,7 @@
 const mongoose=require('mongoose')
-const schema =mongoose.Schema
+const schema = mongoose.Schema
 
-const userschema = new schema ({
+const UserSchema = mongoose.Schema ({
     name:{
         type : String,
         required: true 
@@ -18,4 +18,4 @@ const userschema = new schema ({
      },
 })
 
-module.exports=User=mongoose.model('user, userSchema')
+module.exports=User=mongoose.model('user', UserSchema)

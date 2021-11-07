@@ -1,6 +1,6 @@
 const express=require('express')
 const app=express()
-
+const User=require('./models/User')
 
 const connectDB=require('./config/connectDB')
 connectDB()
@@ -33,7 +33,7 @@ app.post("/ADD", async (req, res) => {
       res.status(400).json({ message: error.message });
     }
   });
-  app.put("/ EDIT /:id", async (req, res) => {
+  app.put("/EDIT/:id", async (req, res) => {
     const { id } = req.params;
     const user = req.body;
   
